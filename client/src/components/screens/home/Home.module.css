@@ -1,0 +1,69 @@
+.wrapper {
+	@apply w-screen min-h-screen relative;
+}
+
+.wrapper > form {
+	@apply w-max p-3 absolute left-5 top-5;
+	animation: slideIn 1s linear;
+}
+
+.wrapper > form > h1 {
+	@apply text-2xl mb-3;
+}
+
+.wrapper > form > input {
+	@apply block py-1.5 px-3 mb-3 w-full border border-transparent bg-black/30 placeholder:text-white/60 outline-none;
+	color: #36363667;
+	transition: all 0.3s ease-in-out;
+}
+
+.wrapper > form > input:focus {
+	@apply border-orange-300;
+}
+
+.wrapper > form > input {
+	color: #fff;
+}
+
+.wrapper > form > button {
+	@apply text-lg font-medium uppercase py-2 px-4 border border-white inline-block mt-2;
+	transition: all 0.3s ease-in-out;
+}
+
+.wrapper > form > button:hover {
+	@apply shadow-sm shadow-white bg-white/20;
+}
+
+.success {
+	@apply text-green-400 text-2xl font-medium m-auto w-max p-3 absolute left-5 
+	top-5;
+	animation: success 0.4s;
+}
+
+.error {
+	@apply text-red-500 text-base mb-2 font-bold;
+}
+
+@keyframes success {
+	from {
+		opacity: 0;
+		transform: scale(0.8);
+	}
+
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@keyframes slideIn {
+	from {
+		transform: translateX(-110%);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
